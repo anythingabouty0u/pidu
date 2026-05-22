@@ -19,7 +19,6 @@ box-sizing:border-box;
 
 body{
 font-family:'Nunito',sans-serif;
-
 background-color:#ffe4ee;
 
 /* LOOPY STICKERS */
@@ -30,9 +29,9 @@ url('LOOPY 2.jpg'),
 url('LOOPY 3.jpg');
 
 background-size:
-120px,
-90px,
-110px;
+130px,
+100px,
+120px;
 
 background-position:
 5% 10%,
@@ -50,7 +49,7 @@ padding:20px;
 position:relative;
 }
 
-/* floating hearts */
+/* FLOATING HEARTS */
 
 .hearts{
 position:fixed;
@@ -104,7 +103,7 @@ opacity:0;
 }
 }
 
-/* card */
+/* CARD */
 
 .card{
 width:90%;
@@ -149,7 +148,7 @@ margin-bottom:20px;
 text-shadow:0 2px 10px rgba(255,255,255,0.8);
 }
 
-/* input */
+/* INPUT */
 
 input{
 width:100%;
@@ -165,7 +164,7 @@ font-weight:700;
 color:#ff2f6d;
 }
 
-/* buttons */
+/* BUTTONS */
 
 button{
 padding:15px 35px;
@@ -194,7 +193,7 @@ button:hover{
 transform:scale(1.08);
 }
 
-/* loopy gif */
+/* LOOPY GIF */
 
 .loopy{
 width:180px;
@@ -211,13 +210,13 @@ transform:translateY(-15px);
 }
 }
 
-/* hidden */
+/* HIDDEN */
 
 .hidden{
 display:none;
 }
 
-/* popup */
+/* POPUP */
 
 .popup{
 position:fixed;
@@ -239,22 +238,7 @@ font-size:55px;
 color:#ff2f6d;
 }
 
-/* photos */
-
-.photos img{
-width:220px;
-border-radius:25px;
-margin:10px;
-border:5px solid white;
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.photos img:hover{
-transform:scale(1.05);
-}
-
-/* video */
+/* VIDEO */
 
 video{
 width:90%;
@@ -272,8 +256,8 @@ box-shadow:0 5px 20px rgba(0,0,0,0.15);
 
 <!-- MUSIC -->
 
-<audio autoplay loop>
-<source src="music.mp3" type="audio/mp3">
+<audio id="bgMusic" autoplay loop>
+<source src="Thank God I Found You.mp3" type="audio/mp3">
 </audio>
 
 <!-- HEARTS -->
@@ -320,7 +304,7 @@ hai sayangku cintakuuuu 💗 <br><br>
 mau tau yang lebih spesial ga? 🎀 <br><br>
 
 kalau mau klik tombol lanjutkan yaaa ♡ <br>
-kalau gamau klik kembali, itupun kalau bisa yaaa, HAHA
+kalau gamau klik kembali, hemzz
 </p>
 
 <button class="yes" onclick="nextLetter()">lanjutkan</button>
@@ -335,23 +319,22 @@ kalau gamau klik kembali, itupun kalau bisa yaaa, HAHA
 
 <img class="loopy" src="https://media.tenor.com/IuJcO3QdZRIAAAAi/loopy-love.gif">
 
-<h1>special message ✨</h1>
+<h1>special message for u ✨</h1>
 
 <p>
 
-HAI SAYANGGKUUU 💗 <br><br>
+HAII SAYANGGKUU 💗 <br><br>
 
-i wanna say something with u.. <br><br>
+i just want to say: <br><br>
 
-makasih yaa udah hadir di hidup aku:> makasi udah selalu
-ada buat aku, aku bersyukur bgt dehh.. <br>
-oh iya, aku sayang banget sama kamu, don't leave me okay? ♡
+makasih yaa udah hadir di hidup aku 🎀 <br>
+aku sayang banget sama kamu, pls don't leave me yaa? ♡
 
 </p>
 
-</div>
+<!-- VIDEO -->
 
-<video controls>
+<video id="ourVideo" controls>
 <source src="video.mp4" type="video/mp4">
 </video>
 
@@ -388,6 +371,38 @@ hey heyy, do u love me? 🎀
 </div>
 
 <script>
+
+/* MUSIC */
+
+const audio = document.getElementById("bgMusic");
+
+/* VIDEO */
+
+const video = document.getElementById("ourVideo");
+
+/* VIDEO PLAY = MUSIC PAUSE */
+
+video.addEventListener("play", () => {
+
+audio.pause();
+
+});
+
+/* VIDEO PAUSE / END = MUSIC PLAY */
+
+video.addEventListener("pause", () => {
+
+audio.play();
+
+});
+
+video.addEventListener("ended", () => {
+
+audio.play();
+
+});
+
+/* LOVE BUTTON */
 
 let noCount = 0;
 
@@ -492,7 +507,7 @@ font-size:95px;
 color:#ff2f6d;
 margin-top:20px;
 ">
-YEY! 💗
+thank you 💗
 </h1>
 
 <p style="
@@ -502,8 +517,8 @@ color:#ff2f6d;
 max-width:700px;
 line-height:1.8;
 ">
-THANK U SO MUCH SAYANGGG 🎀 <br>
-you're the best thing that ever happened to me ♡
+HEHEHE THANK U SAYANGG, anw this is the last page.. 🎀 <br>
+do u know? you're the best thing that ever happened to me ♡
 </p>
 
 </div>
